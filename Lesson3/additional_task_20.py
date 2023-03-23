@@ -27,14 +27,8 @@ if __name__ == "__main__":
            10: 'ФЩЪ'}
     user_name = input("Как вас зовут? ")
     print(f"Приветствую, {user_name}. Я помогу вам посчитать очки, по правилам Скрабл!")
-    language = input("Какой язык выберешь? 1 - русский, 0 - английский: ")
-    if get_language(language):
-        input_word = input("Введите слово: ").upper()
-        if language == '1':
-            score = sum([k for i in input_word for k, v in rus.items() if i in v])
-            print(f"За слово {input_word} получаете {score} очков ")
-        else:
-            score = sum([k for i in input_word for k, v in eng.items() if i in v])
-            print(f"За слово {input_word} получаете {score} очков ")
-    else:
-        print("Нужно ввести 1 или 0")
+    choice_language, language = input("Какой язык выберешь? 1 - русский, 0 - английский: "), None
+    input_word = input("Введите слово: ").upper() if get_language(choice_language) else print("Нужно ввести 1 или 0")
+    language = rus if choice_language == '1' else eng
+    score = sum([k for i in input_word for k, v in language.items() if i in v])
+    print(f"За слово {input_word} получаете {score} очков ")
