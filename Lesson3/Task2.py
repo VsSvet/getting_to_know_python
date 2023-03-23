@@ -25,12 +25,8 @@ def add_rating_to_list(my_list: list, index_n: int, arg: int):
 
 
 if __name__ == "__main__":
-    user_input = input("Введите число: ")
-    rating = [7, 5, 3, 3, 2]
-    if check_input(user_input):
-        user_input = convert_input(user_input)
-        index_rating = get_the_rating_index(rating, user_input)
-        rating = add_rating_to_list(rating, index_rating, user_input)
-        print(f"Пользователь ввел число {user_input}. Результат: {rating}")
-    else:
-        print("Нужно ввести число, а не строку")
+    user_input, rating = input("Введите число: "), [7, 5, 3, 3, 2]
+    user_input = convert_input(user_input) if check_input(user_input) else print("Нужно ввести число, а не строку")
+    index_rating = get_the_rating_index(rating, user_input)
+    rating = add_rating_to_list(rating, index_rating, user_input)
+    print(f"Пользователь ввел число {user_input}. Результат: {rating}")

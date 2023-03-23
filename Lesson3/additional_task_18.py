@@ -20,9 +20,8 @@ def get_index_number(my_list_num: list, num: str):
 
 
 if __name__ == "__main__":
-    count_el = input("Введите количество чисел в массиве: ")
+    count_el, my_list = input("Введите количество чисел в массиве: "), []
     count_el = convert_input(count_el) if check_input(count_el) else print("Нужно ввести число.")
-    my_list = []
     for i in range(count_el):
         user_input = input("Введите элемент массива: ")
         my_list.append(convert_input(user_input)) if check_input(user_input) else print("Нужно вводить числа")
