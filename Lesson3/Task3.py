@@ -18,6 +18,7 @@ if check_input(count_product):
     [print(f"{key}: {value}") for key, value in dict(my_list).items()]
     product_values = [[my_list[i][1][k] for i in range(count_product)] for k in product_keys]
     analytics = dict(zip(product_keys, product_values))
+    print("Аналитика по товарам")
     [print(f"{key}: {value}") for key, value in analytics.items()]
 else:
     print("Нужно ввести число")
