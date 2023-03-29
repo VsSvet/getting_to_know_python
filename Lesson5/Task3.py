@@ -9,6 +9,6 @@ def get_reverse_num(num, reverse):
 
 if __name__ == "__main__":
     reverse_num = ""
-    number = int(input("Введите число: "))
-    reverse_num = get_reverse_num(number, reverse_num)
-    print("Обратное число:", reverse_num)
+    number = input("Введите число: ")
+    print("Обратное число:", get_reverse_num(int(number), reverse_num)) if number.isdigit() \
+        else print("Нужно ввести число")
