@@ -25,7 +25,7 @@ def get_the_result_calculation(sign, num_1, num_2):
             print("На ноль делить нельзя!")
 
 
-def x(result_calculation):
+def recursion_calculations(result_calculation):
     operation_sign = checking_the_correct_sign(input("Выберите операцию, сложение '+' , вычитание '-', "
                                                      "умножение '*' или деление '/' или завершить программу = 0: "))
     if operation_sign == '0':
@@ -34,8 +34,8 @@ def x(result_calculation):
         number_1, number_2 = input("Введите первое число: "), input("Введите второе число: ")
         print(result_calculation(operation_sign, int(number_1), int(number_2))) \
             if (number_1.isdigit() and number_2.isdigit()) else print("Нужно вводить цифры!")
-        x(operation_sign)
+        return result_calculation(operation_sign)
 
 
 if __name__ == "__main__":
-    x(get_the_result_calculation)
+    recursion_calculations(get_the_result_calculation)
