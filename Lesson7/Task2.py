@@ -29,7 +29,6 @@ class Road:
         return result
 
 
-# 20м*5000м*25кг*0.05м = 125000 кг = 125 т
 if __name__ == '__main__':
     road1 = Road(5000, 20)
     weight1 = road1.get_weight(25, 0.05)
