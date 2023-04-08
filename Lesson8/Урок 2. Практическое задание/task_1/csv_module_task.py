@@ -32,7 +32,8 @@ def write_to_csv(file, main_data):
                         "Тип системы": main_data[4][i]})
 
 
-result = get_data(['info_1.txt', 'info_2.txt', 'info_3.txt'])
-write_to_csv("main_data.csv", result)
-with open("main_data.csv") as f_n:
-    print(f_n.read())
+if __name__ == '__main__':
+    result = get_data(['info_1.txt', 'info_2.txt', 'info_3.txt'])
+    write_to_csv("main_data.csv", result)
+    with open("main_data.csv") as f_n:
+        print(f_n.read())
