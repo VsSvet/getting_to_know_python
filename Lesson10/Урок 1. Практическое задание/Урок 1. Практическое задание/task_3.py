@@ -15,3 +15,4 @@ for word in words:
         bytes(word, 'ascii')
     except UnicodeError:
         print(f"Слово '{word}' невозможно записать в байтовом типе")
+

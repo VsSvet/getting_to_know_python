@@ -7,4 +7,11 @@
 Подсказки:
 --- используйте модуль chardet, иначе задание не засчитается!!!
 """
+from chardet import detect
+from urllib.request import urlopen
 
+yan = urlopen('http://yandex.ru/').read()
+print(detect(yan))
+
+yt = urlopen('http://youtube.com/').read()
+print(detect(yt))
