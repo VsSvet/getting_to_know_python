@@ -11,5 +11,7 @@
 """
 words = ["attribute", "класс", "функция", "type"]
 for word in words:
-    if ascii(word) != repr(word):
+    try:
+        bytes(word, 'ascii')
+    except UnicodeError:
         print(f"Слово '{word}' невозможно записать в байтовом типе")
