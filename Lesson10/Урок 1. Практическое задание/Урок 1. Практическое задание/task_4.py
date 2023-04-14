@@ -8,3 +8,8 @@
 Подсказки:
 --- используйте списки и циклы, не дублируйте функции
 """
+words = ['разработка', 'администрирование', 'protocol', 'standard']
+byte_format = [item.encode('utf-8') for item in words]
+str_format = [item.decode('utf-8') for item in byte_format]
+print(byte_format)
+print(str_format)
